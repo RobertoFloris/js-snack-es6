@@ -107,4 +107,16 @@ for (let i in squadre){
   squadre[i].falliSubiti = Math.floor(Math.random()* 500) + 1; // numero random da 1 a 500 per i falli subiti
 }
 
-console.log(squadre)
+//inizializzo il nuovo array
+const newArray = [];
+
+//pusho all'interno un nuovo oggetto composto dalle sole proprietà nome e falli subiti
+for (let i in squadre){
+  newArray.push({
+    nome: squadre[i].nome,
+    falliSubiti : squadre[i].falliSubiti
+  });
+}
+
+console.log(squadre);
+console.log(newArray)
